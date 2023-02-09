@@ -1,12 +1,31 @@
 import React from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { HiOutlineSearch } from "react-icons/hi";
+import { setLayout, selectLayout } from "../../features/appSlice";
 import Logo from "../Icons/Logo";
+import { useDispatch, useSelector } from "react-redux";
 function index() {
+  const dispatch = useDispatch();
+  const layout = useSelector(selectLayout);
+
+  console.log(layout);
+
+  const handleLayoutChange = () => {
+    if (layout === "18% 82%") {
+      dispatch(setLayout("8% 92%"));
+    } else {
+      dispatch(setLayout("18% 82%"));
+    }
+  };
   return (
-    <div className="sticky top-0 px-6 py-3 flex justify-between items-center bg-black/90 h-[66px]">
+    <div className="sticky top-0 px-6 py-3 flex justify-between items-center bg-white h-[66px]">
       <div className="flex gap-6 items-center">
-        <button className="text-white text-2xl">
+        <button
+          className="text-black text-2xl"
+          onClick={() => {
+            handleLayoutChange();
+          }}
+        >
           <MdOutlineMenu />
         </button>
         <div>
@@ -14,7 +33,7 @@ function index() {
         </div>
       </div>
 
-      <div className=" bg-[#121212] h-[40px] flex items-center rounded-full pl-2 overflow-hidden bg-transparent border border-[#303030]">
+      <div className=" bg-white h-[40px] flex items-center rounded-full pl-2 overflow-hidden bg-transparent border border-[#303030]">
         <div
           className="relative flex items-center gap-1 w-[572px] h-full group bg-transparent cursor-text"
           tabIndex={1}

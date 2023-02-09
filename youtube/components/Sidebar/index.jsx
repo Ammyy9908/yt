@@ -2,7 +2,9 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div className="bg-red-500 flex items-center justify-center">Sidebar</div>
+    <div className="bg-white flex items-center justify-center border-r-2 border-t-2">
+      Sidebar
+    </div>
   );
 }
 

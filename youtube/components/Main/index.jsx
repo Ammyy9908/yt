@@ -1,16 +1,19 @@
 import React from "react";
 import Sidebar from "../Sidebar/index";
+import { selectLayout } from "../../features/appSlice";
+import { useSelector } from "react-redux";
 function index() {
+  const layout = useSelector(selectLayout);
   return (
     <div
-      className="w-full h-full grid"
+      className="w-full h-full grid transition-all"
       style={{
-        gridTemplateColumns: "18% 82%",
+        gridTemplateColumns: layout,
       }}
     >
       <Sidebar />
-      <div className="main-content bg-black/90 h-full flex items-center justify-center">
-        <h1 className="text-white text-2xl">Main Render comes Here</h1>
+      <div className="main-content bg-white h-full flex items-center justify-center border-t-2">
+        <h1 className="text-black text-2xl">Main Render comes Here</h1>
       </div>
     </div>
   );

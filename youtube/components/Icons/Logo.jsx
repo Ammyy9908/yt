@@ -25,7 +25,7 @@ function Logo() {
             className="style-scope yt-icon"
           ></path>
         </g>
-        <g className="style-scope yt-icon" fill="#ffffff">
+        <g className="style-scope yt-icon" fill="#000000">
           <g id="youtube-paths" className="style-scope yt-icon">
             <path
               d="M34.6024 13.0036L31.3945 1.41846H34.1932L35.3174 6.6701C35.6043 7.96361 35.8136 9.06662 35.95 9.97913H36.0323C36.1264 9.32532 36.3381 8.22937 36.665 6.68892L37.8291 1.41846H40.6278L37.3799 13.0036V18.561H34.6001V13.0036H34.6024Z"
